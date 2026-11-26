@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nomenclature BioSkin</title>
+
+<style>
+:root {
+    --bg: #f9ede1;
+    --brown: #754a2b;
+    --brown-light: #b18a67;
+    --cream: #fffaf5;
+    --text: #493321;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: var(--brown);
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #98765a;
+    margin-bottom: 30px;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.legend span {
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: var(--cream);
+    border: 1px solid #d8bda5;
+    font-size: 13px;
+}
+
+.tree {
+    max-width: 1150px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 28px;
+    margin: 0;
+    border-left: 2px solid #c4a181;
+}
+
+.tree > ul {
+    padding-left: 0;
+    border: none;
+}
+
+li {
+    position: relative;
+    padding: 12px 0 5px 25px;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 22px;
+    border-top: 2px solid #c4a181;
+}
+
+.tree > ul > li::before {
+    display: none;
+}
+
+details {
+    width: fit-content;
+    min-width: 340px;
+    max-width: 650px;
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.node {
+    background: var(--cream);
+    border: 1px solid #c5a487;
+    border-left: 5px solid var(--brown);
+    border-radius: 10px;
+    padding: 13px 17px;
+    box-shadow: 0 3px 7px #754a2b12;
+    transition: 0.2s;
+}
+
+
+.root {
+    background: var(--brown);
+    color: white;
+    border: none;
+    border-left: 6px solid #b18a67;
+    padding: 20px;
+}
+
+.root .code,
+.root .info {
+    color: white;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.code {
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.designation {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.level {
+    font-size: 11px;
+    background: #ead7c5;
+    color: #754a2b;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.root .level {
+    background: #fffaf5;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    color: #82664d;
+    font-size: 12px;
+}
+
+.info span {
+    background: #f3e5d8;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.root .info span {
+    background: #8c674b;
+    color: white;
+}
+
+.type {
+    font-weight: bold;
+}
+
+.arrow {
+    margin-left: 8px;
+    color: #a17a56;
+    font-size: 12px;
+}
+
+details[open] > summary .arrow {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+.leaf {
+    display: block;
+    padding: 14px 17px;
+    background: #fffaf5;
+    border: 1px solid #d4bda8;
+    border-left: 5px solid #b18a67;
+    border-radius: 10px;
+    min-width: 340px;
+    max-width: 650px;
+}
+
+.footer {
+    text-align: center;
+    color: #98765a;
+    margin-top: 40px;
+    font-size: 12px;
+}
+
+@media(max-width:600px) {
+    body { padding: 20px 10px; }
+    details, .leaf { min-width: 310px; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Nomenclature arborescente BioSkin</h1>
+<p class="subtitle">
+    Coffret BioSkin Soin Naturel — COF-100
+    <br>Structure hiérarchique sur 5 niveaux
+</p>
+
+<div class="legend">
+    <span>PF : Produit fini</span>
+    <span>SF : Produit semi-fini</span>
+    <span>MP : Matière première</span>
+    <span>Atelier : Fabrication interne</span>
+</div>
+
+<div class="tree">
+<ul>
+
+<!-- PRODUIT PRINCIPAL -->
+<li>
+<details open>
+<summary>
+<div class="node root">
+    <div class="heading">
+        <span class="code">COF-100</span>
+        <span class="designation">Coffret BioSkin Soin Naturel</span>
+        <span class="level">N0</span>
+    </div>
+    <div class="info">
+        <span>Produit fini (PF)</span>
+        <span>Unité : pièce</span>
+        <span>Fabrication : Atelier</span>
+    </div>
+</div>
+</summary>
+
+<ul>
+
+<!-- CREME -->
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">CRM-10</span>
+        <span class="designation">Crème visage aloe vera 50 g conditionnée</span>
+        <span class="level">N1</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>Quantité : 1 pce</span>
+        <span class="type">SF</span>
+        <span>Fournisseur : Atelier</span>
+    </div>
+</div>
+</summary>
+
+<ul>
+
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">BCR-11</span>
+        <span class="designation">Base crème émulsionnée</span>
+        <span class="level">N2</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>0,05 kg / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+
+<ul>
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">PGR-111</span>
+        <span class="designation">Phase grasse</span>
+        <span class="level">N3</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>0,5 kg / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+<ul>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">HOL-1111</span>
+        <span class="designation">Huile d'olive vierge</span>
+        <span class="level">N4</span>
+    </div>
+    <div class="info">
+        <span>0,6 kg / parent</span>
+        <span>MP</span>
+        <span>Fournisseur : F01</span>
+    </div>
+</div>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">BKA-1112</span>
+        <span class="designation">Beurre de karité</span>
+        <span class="level">N4</span>
+    </div>
+    <div class="info">
+        <span>0,4 kg / parent</span>
+        <span>MP</span>
+        <span>Fournisseur : F03</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">PAQ-112</span>
+        <span class="designation">Phase aqueuse</span>
+        <span class="level">N3</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>0,5 kg / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+<ul>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">GAL-1121</span>
+        <span class="designation">Gel d'aloe vera</span>
+        <span class="level">N4</span>
+    </div>
+    <div class="info">
+        <span>0,7 kg / parent</span>
+        <span>MP</span>
+        <span>F02</span>
+    </div>
+</div>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">EAU-1122</span>
+        <span class="designation">Eau déminéralisée</span>
+        <span class="level">N4</span>
+    </div>
+    <div class="info">
+        <span>0,3 L / parent</span>
+        <span>MP</span>
+        <span>F05</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+</details>
+</li>
+
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">EVC-12</span>
+        <span class="designation">Extrait de camomille</span>
+        <span class="level">N2</span>
+    </div>
+    <div class="info">
+        <span>0,002 kg / parent</span>
+        <span>MP</span>
+        <span>F04</span>
+    </div>
+</div>
+</li>
+
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">POT-13</span>
+        <span class="designation">Pot en verre 50 ml</span>
+        <span class="level">N2</span>
+    </div>
+    <div class="info">
+        <span>1 pce / parent</span>
+        <span>MP</span>
+        <span>F06</span>
+    </div>
+</div>
+</li>
+
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">ETQ-14</span>
+        <span class="designation">Étiquette crème</span>
+        <span class="level">N2</span>
+    </div>
+    <div class="info">
+        <span>1 pce / parent</span>
+        <span>MP</span>
+        <span>F07</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+
+<!-- SAVON -->
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">SAV-20</span>
+        <span class="designation">Savon naturel à l'huile d'olive 100 g</span>
+        <span class="level">N1</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>1 pce / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+
+<ul>
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">PSA-21</span>
+        <span class="designation">Pâte de savon</span>
+        <span class="level">N2</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>0,1 kg / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+<ul>
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">SAP-211</span>
+        <span class="designation">Huile saponifiée</span>
+        <span class="level">N3</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>0,95 kg / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+<ul>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">HOL-1111</span>
+        <span class="designation">Huile d'olive vierge</span>
+        <span class="level">N4</span>
+    </div>
+    <div class="info">
+        <span>0,85 kg / parent</span>
+        <span>MP</span>
+        <span>F01</span>
+    </div>
+</div>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">SOU-2112</span>
+        <span class="designation">Soude de saponification</span>
+        <span class="level">N4</span>
+    </div>
+    <div class="info">
+        <span>0,12 kg / parent</span>
+        <span>MP</span>
+        <span>F05</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">EVL-212</span>
+        <span class="designation">Extrait de lavande</span>
+        <span class="level">N3</span>
+    </div>
+    <div class="info">
+        <span>0,03 kg / parent</span>
+        <span>MP</span>
+        <span>F04</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">EMS-22</span>
+        <span class="designation">Emballage papier kraft (savon)</span>
+        <span class="level">N2</span>
+    </div>
+    <div class="info">
+        <span>1 pce / parent</span>
+        <span>MP</span>
+        <span>F07</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+
+<!-- SHAMPOING -->
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">SHA-30</span>
+        <span class="designation">Shampoing aloe-romarin 250 ml</span>
+        <span class="level">N1</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>1 pce / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+
+<ul>
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">BSH-31</span>
+        <span class="designation">Base lavante</span>
+        <span class="level">N2</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>0,25 kg / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+<ul>
+<li>
+<details open>
+<summary>
+<div class="node">
+    <div class="heading">
+        <span class="code">BTE-311</span>
+        <span class="designation">Base tensioactive végétale</span>
+        <span class="level">N3</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="info">
+        <span>0,9 kg / parent</span>
+        <span>SF</span>
+        <span>Atelier</span>
+    </div>
+</div>
+</summary>
+<ul>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">GAL-1121</span>
+        <span class="designation">Gel d'aloe vera</span>
+        <span class="level">N4</span>
+    </div>
+    <div class="info">
+        <span>0,4 kg / parent</span>
+        <span>MP</span>
+        <span>F02</span>
+    </div>
+</div>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">TEN-3112</span>
+        <span class="designation">Tensioactif doux d'origine coco</span>
+        <span class="level">N4</span>
+    </div>
+    <div class="info">
+        <span>0,6 kg / parent</span>
+        <span>MP</span>
+        <span>F05</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">EVR-312</span>
+        <span class="designation">Extrait de romarin</span>
+        <span class="level">N3</span>
+    </div>
+    <div class="info">
+        <span>0,02 kg / parent</span>
+        <span>MP</span>
+        <span>F04</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">FLA-32</span>
+        <span class="designation">Flacon 250 ml</span>
+        <span class="level">N2</span>
+    </div>
+    <div class="info">
+        <span>1 pce / parent</span>
+        <span>MP</span>
+        <span>F06</span>
+    </div>
+</div>
+</li>
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">ETQ-33</span>
+        <span class="designation">Étiquette shampoing</span>
+        <span class="level">N2</span>
+    </div>
+    <div class="info">
+        <span>1 pce / parent</span>
+        <span>MP</span>
+        <span>F07</span>
+    </div>
+</div>
+</li>
+</ul>
+</details>
+</li>
+
+<!-- BOITE -->
+<li>
+<div class="leaf">
+    <div class="heading">
+        <span class="code">BOI-40</span>
+        <span class="designation">Boîte coffret en carton recyclé</span>
+        <span class="level">N1</span>
+    </div>
+    <div class="info">
+        <span>1 pce / parent</span>
+        <span>MP</span>
+        <span>F07</span>
+    </div>
+</div>
+</li>
+
+</ul>
+</details>
+</li>
+</ul>
+</div>
+
+<p class="footer">
+    BioSkin — Gestion de production | Nomenclature des composants
+</p>
+
+</body>
+</html>
